@@ -7,6 +7,11 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 
+#root {
+  background: #EBECFF;
+  height: 100vh;
+}
+
 .theme-dark {
   --dark-text: #292929;
   --light-text: #F9F8F8;  
@@ -19,14 +24,20 @@ html {
 .theme-light {
   --dark-text: #5E4B56;
   --light-text: #5E4B56;
-  --dark-background: #DBE7E4;
+  --dark-background: #F7F7FF;
   --light-background: #EDDCD2;
   --accent: #DBE7E4;
   --button-border: #5E4B56;
 }
 
 .main-div {
-  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  border-radius:8px;
   background: var(--dark-background);
 }
 
@@ -85,7 +96,6 @@ input[type="checkbox"]
     opacity: 1;
     background-color: #fff;
     border-radius: 40px;
-    border: 3px solid #dc54f4;
     transition: 0.2s ease background-color, 0.2s ease opacity;
 }
 
@@ -103,14 +113,14 @@ input[type="checkbox"]
 #_1st-toggle-btn span:before
 {
     background-color: #fff;
-    transform: translate(-38px,0px);
+    transform: translate(-40px,2px);
     z-index: 1;
 }
 
 #_1st-toggle-btn span:after
 {
     background-color: #000;
-    transform: translate(8px,0px);
+    transform: translate(6px,-2px);
     z-index: 0;
 }
 
@@ -127,13 +137,13 @@ input[type="checkbox"]
 #_1st-toggle-btn input[type="checkbox"]:checked + span:before
 {
 background-color: #000;
-    transform: translate(46px,-9px);
+    transform: translate(45px,-7px);
 }
 
 #_1st-toggle-btn input[type="checkbox"]:checked + span:after
 {
     background-color: #fff;
-    transform: translate(57px,-0px);
+    transform: translate(54px,-2px);
 }
 
 
@@ -211,7 +221,7 @@ form.create-note button {
   position: absolute;
   right: 18px;
   bottom: -18px;
-  background: #4aDEDE;
+  background: linear-gradient(180deg, rgba(140,74,242,1) 8%, rgba(109,85,245,1) 88%);
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -223,7 +233,7 @@ form.create-note button {
 }
 
 form.create-note button:hover {
-  color: #4aDEDE;
+  color: linear-gradient(180deg, rgba(140,74,242,1) 8%, rgba(109,85,245,1) 88%);
   background: white;
 }
 
