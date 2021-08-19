@@ -1,0 +1,233 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+.theme-dark {
+  --dark-text: #292929;
+  --light-text: #F9F8F8;  
+  --dark-background: black;
+  --light-background: #586F7C;
+  --accent: #B8DBD9;
+  --button-border: #B8DBD9;
+}
+
+.theme-light {
+  --dark-text: #5E4B56;
+  --light-text: #5E4B56;
+  --dark-background: #DBE7E4;
+  --light-background: #EDDCD2;
+  --accent: #DBE7E4;
+  --button-border: #5E4B56;
+}
+
+.main-div {
+  height: 100vh;
+  background: var(--dark-background);
+}
+
+.note-section {
+  position: absolute;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.notes-index {
+  width: 100%;
+  overflow: scroll;
+  max-height: 500px;
+  padding: 20px;
+
+}
+
+.toggle-btn
+{
+    position: absolute;
+    right: 10px;
+    width: 92px;
+    height: 40px;
+    margin: 15px;
+    border-radius: 40px;
+}
+
+input[type="checkbox"]
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+/* First toggle btn */
+
+#_1st-toggle-btn span
+{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    overflow: hidden;
+    opacity: 1;
+    background-color: #fff;
+    border-radius: 40px;
+    border: 3px solid #dc54f4;
+    transition: 0.2s ease background-color, 0.2s ease opacity;
+}
+
+#_1st-toggle-btn span:before,#_1st-toggle-btn span:after
+{
+    content: '';
+    position: absolute;
+    top: 4px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: 0.5s ease transform, 0.2s ease background-color;
+}
+
+#_1st-toggle-btn span:before
+{
+    background-color: #fff;
+    transform: translate(-38px,0px);
+    z-index: 1;
+}
+
+#_1st-toggle-btn span:after
+{
+    background-color: #000;
+    transform: translate(8px,0px);
+    z-index: 0;
+}
+
+#_1st-toggle-btn input[type="checkbox"]:checked + span
+{
+    background-color: #000;
+}
+
+#_1st-toggle-btn input[type="checkbox"]:active + span
+{
+    opacity: 0.5;
+}
+
+#_1st-toggle-btn input[type="checkbox"]:checked + span:before
+{
+background-color: #000;
+    transform: translate(46px,-9px);
+}
+
+#_1st-toggle-btn input[type="checkbox"]:checked + span:after
+{
+    background-color: #fff;
+    transform: translate(57px,-0px);
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.notes-index::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.notes-index {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.create-area {
+  padding: 20px;
+}
+
+.note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 20px;
+  width: 500px;
+  margin: 16px;
+  float: left;
+}
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 4px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: #f5ba13;
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+}
+
+form.create-note {
+  position: relative;
+  width: 480px;
+  margin: 0;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+form.create-note button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #4aDEDE;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+form.create-note button:hover {
+  color: #4aDEDE;
+  background: white;
+}
+
+form.create-note input {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
