@@ -8,15 +8,15 @@ html {
 }
 
 #root {
-  background: #EBECFF;
+  background: var(--light-background);
   height: 100vh;
 }
 
 .theme-dark {
   --dark-text: #292929;
   --light-text: #F9F8F8;  
-  --dark-background: black;
-  --light-background: #586F7C;
+  --dark-background: #262D47;
+  --light-background: #161C30;
   --accent: #B8DBD9;
   --button-border: #B8DBD9;
 }
@@ -24,8 +24,8 @@ html {
 .theme-light {
   --dark-text: #5E4B56;
   --light-text: #5E4B56;
-  --dark-background: #F7F7FF;
-  --light-background: #EDDCD2;
+  --dark-background: #EEEEFE;
+  --light-background: #F7F7FF;
   --accent: #DBE7E4;
   --button-border: #5E4B56;
 }
@@ -35,8 +35,8 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80vw;
-  height: 80vh;
+  width: 90vw;
+  height: 90vh;
   border-radius:8px;
   background: var(--dark-background);
 }
@@ -119,14 +119,14 @@ input[type="checkbox"]
 
 #_1st-toggle-btn span:after
 {
-    background-color: #000;
-    transform: translate(6px,-2px);
+    background-color: rgb(140,74,242);
+    transform: translate(6px,1px);
     z-index: 0;
 }
 
 #_1st-toggle-btn input[type="checkbox"]:checked + span
 {
-    background-color: #000;
+    background-color: #161C30;
 }
 
 #_1st-toggle-btn input[type="checkbox"]:active + span
@@ -136,14 +136,14 @@ input[type="checkbox"]
 
 #_1st-toggle-btn input[type="checkbox"]:checked + span:before
 {
-background-color: #000;
-    transform: translate(45px,-7px);
+background-color: #161C30;
+    transform: translate(45px,-6px);
 }
 
 #_1st-toggle-btn input[type="checkbox"]:checked + span:after
 {
-    background-color: #fff;
-    transform: translate(54px,-2px);
+    background-color: linear-gradient(180deg, rgba(140,74,242,1) 8%, rgba(109,85,245,1) 88%);
+    transform: translate(54px,1px);
 }
 
 
@@ -189,7 +189,6 @@ background-color: #000;
   position: relative;
   float: right;
   margin-right: 10px;
-  color: #f5ba13;
   border: none;
   width: 36px;
   height: 36px;

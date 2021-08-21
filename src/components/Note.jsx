@@ -14,7 +14,7 @@ function Note(props) {
       </div>
       <div className="delete-button">
         <button onClick={handleClick}>
-          <DeleteIcon style={{ color: "linear-gradient(180deg, rgba(140,74,242,1) 8%, rgba(109,85,245,1) 88%);" }} />
+          <DeleteIcon style={{ fill: "rgb(140,74,242)" }} />
         </button>
       </div>
     </div>
