@@ -19,6 +19,9 @@ html {
   --light-background: #161C30;
   --accent: #B8DBD9;
   --button-border: #B8DBD9;
+  --card-back: #161C30;
+  --card-text: white;
+  --card-shadow: 0 2px 5px black;
 }
 
 .theme-light {
@@ -28,6 +31,9 @@ html {
   --light-background: #F7F7FF;
   --accent: #DBE7E4;
   --button-border: #5E4B56;
+  --card-back: white;
+  --card-text: black;
+  --card-shadow: 0 1px 5px rgb(138, 137, 137);
 }
 
 .main-div {
@@ -53,7 +59,7 @@ html {
 .notes-index {
   width: 100%;
   overflow: scroll;
-  max-height: 500px;
+  max-height: 560px;
   padding: 20px;
 
 }
@@ -162,13 +168,18 @@ background-color: #161C30;
   padding: 20px;
 }
 
+.note-content {
+  width: 80%;
+}
+
 .note {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
+  background: var(--card-back);
+  color: var(--card-text);
   border-radius: 7px;
-  box-shadow: 0 2px 5px #ccc;
+  box-shadow: var(--card-shadow);
   padding: 20px;
   width: 500px;
   margin: 16px;
@@ -201,10 +212,10 @@ form.create-note {
   position: relative;
   width: 480px;
   margin: 0;
-  background: #fff;
+  background: var(--card-back);
   padding: 15px;
   border-radius: 7px;
-  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  box-shadow: var(--card-shadow);
 }
 form.create-note input,
 form.create-note textarea {
@@ -215,6 +226,8 @@ form.create-note textarea {
   font-size: 1.2em;
   font-family: inherit;
   resize: none;
+  background-color: var(--card-back);
+  color: var(--card-text);
 }
 form.create-note button {
   position: absolute;
