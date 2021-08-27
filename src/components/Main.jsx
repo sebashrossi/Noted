@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
-import Toggle from "./Toggle"
+import Toggle from "./Toggle";
+import DisplayDate from "./Date";
+
 
 function Main() {
   const [notes, setNotes] = useState([]);
@@ -52,7 +54,8 @@ function Main() {
 
   return (
     <div className="main-div">
-    <Toggle />
+      <DisplayDate />
+      <Toggle />
       <div className="note-section">
         <div>
         <CreateArea onAdd={addNote} />
