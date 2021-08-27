@@ -47,6 +47,26 @@ html {
   background: var(--dark-background);
 }
 
+.date-container {
+  position: absolute;
+  left:0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.date-container p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.day h1 {
+  color: rgba(140,74,242,1);
+  font-size: 6rem;
+  margin-right: 12px;
+}
+
 .note-section {
   position: absolute;
   align-items: center;
